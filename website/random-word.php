@@ -26,7 +26,7 @@
     function randomWord($language) {
         $language_file = NULL;
 
-        if(!empty($language) && ['Gek', 'Vy%27keen', 'Korvax'].include($language)) {
+        if(!empty($language) && in_array($language, ['Gek', 'Vy%27keen', 'Korvax'])) {
             $language_file = $language . ".txt";
         }
         else {
