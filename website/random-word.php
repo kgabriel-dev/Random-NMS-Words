@@ -4,6 +4,7 @@
         $language = htmlspecialchars($_GET['language']);
         randomWord($language);
     } catch(Exception $e) {
+        http_response_code(400);
         print('Error: An error occurred. Please try again later.');
     }
     
@@ -34,6 +35,7 @@
         }
 
         if(!file_exists(__DIR__ . "/languages/" . $language_file)) {
+            http_response_code(400);
             print("Error: File not found");
             return;
         }
@@ -54,6 +56,7 @@
 
         $language = basename($language_file, ".txt");
 
+        http_response_code(200);
         print json_encode(array("word" => $word, "language" => $language));
     }
 ?>
