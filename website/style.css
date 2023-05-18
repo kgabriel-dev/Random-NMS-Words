@@ -1,0 +1,42 @@
+#show {
+    border: 2px solid blue;
+    border-radius: 1em;
+    margin: 2em;
+    padding: 2em;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.flex-justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    border: 2px solid darkcyan;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    display: inline-block;
+}
+
+#word-container {
+    text-align: center;
+}
+
+#translation-container {
+    text-align: left;
+}
+
+#language-container {
+    font-size: large;
+    text-align: center;
+    margin-top: 1em;
+}
+
+#language {
+    font-weight: bold;
+}

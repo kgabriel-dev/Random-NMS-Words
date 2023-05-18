@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="index.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h1>Get a random word from the language of the Gek, the Korvax or the Vy'keen.</h1>
+    <div id="show">
+        <h2>Your randomly selected word is...</h2>
+        <div class="flex-justify-center">
+            <span class="container" id="word-container">
+                <h3>Word:</h3>
+                <span id="word">Fetching word...</span>
+            </span>
+
+            <span class="container" id="translation-container">
+                <h3>Translation:</h3>
+
+                <strong>Normal:</strong>
+                <span id="translation">Fetching translation...</span><br>
+
+                <strong>Capitalized:</strong>
+                <span id="translation_caps">Fetching translation...</span><br>
+
+                <strong>All Caps:</strong>
+                <span id="translation_all-caps">Fetching translation...</span>
+            </span>
+        </div>
+
+        <div id="language-container">...from the language of the <span id="language">(currently fetching...)</span>.</div>
+    </div>
+</body>
+</html>
