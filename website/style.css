@@ -1,8 +1,19 @@
+body {
+    background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.6)), url("https://nms-words.kgabriel.dev/assets/nms-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2em 1em;
+}
+
 #show {
     border: 2px solid blue;
     border-radius: 1em;
     margin: 2em;
     padding: 2em;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.5);
+    font-size: large;
 }
 
 h1, h2, h3 {
@@ -13,6 +24,11 @@ h1, h2, h3 {
 .flex-justify-center {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-grow {
+    flex-grow: 1;
 }
 
 .container {
@@ -25,10 +41,12 @@ h1, h2, h3 {
 
 #word-container {
     text-align: center;
+    min-width: 400px;
 }
 
 #translation-container {
     text-align: left;
+    min-width: 400px;
 }
 
 #language-container {
@@ -39,4 +57,24 @@ h1, h2, h3 {
 
 #language {
     font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+footer {
+    font-size: large;
+    font-weight: 700;
+}
+
+#legal {
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 1em;
+    display: inline-block;
+    padding: 1em;
+}
+
+a, a:visited, a:active {
+    color: darkcyan;
 }
