@@ -1,7 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => getRandomWord());
+document.addEventListener('DOMContentLoaded', () => {
+    getRandomWord();
+    setLanguageSelection();
+});
 
 async function getRandomWord() {
-    const url = 'https://nms-words.kgabriel.dev/random-word.php';
+    const urlSearchParams = new URLSearchParams(window.location.search),
+        currentLanguage = urlSearchParams.get('language');
+
+    const url = currentLanguage ? 'https://nms-words.kgabriel.dev/random-word.php?language=' + currentLanguage : 'https://nms-words.kgabriel.dev/random-word.php';
 
     const response = await fetch(url, { method: 'GET', mode: 'no-cors'});
     
@@ -39,4 +45,22 @@ function setDataInDom(data) {
 function setStringForDomElementWithId(id, string) {
     const element = document.getElementById(id);
     element.innerText = string;
+}
+
+function setNmsLanguage() {
+    const selection = document.getElementById('language-selection').value;
+    const language = selection === 'random' ? '' : selection.charAt(0).toUpperCase() + selection.slice(1);
+
+    const url = selection !== 'random' ? 'https://nms-words.kgabriel.dev?language=' + language : 'https://nms-words.kgabriel.dev';
+    
+    window.location.href = url;
+}
+
+function setLanguageSelection(language) {
+    const urlSearchParams = new URLSearchParams(window.location.search),
+        urlLanguage = urlSearchParams.get('language');
+
+    const value = urlLanguage.toLowerCase();
+    const selection = document.getElementById('language-selection');
+    selection.value = ['gek', 'korvax', 'vykeen'].includes(value) ? value : ['random'];
 }
