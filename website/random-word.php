@@ -1,7 +1,7 @@
 <?php
 
     try {
-        $language = htmlspecialchars($_GET['language']);
+        $language = $_GET['language'];
         randomWord($language);
     } catch(Exception $e) {
         http_response_code(400);
@@ -27,7 +27,7 @@
     function randomWord($language) {
         $language_file = NULL;
 
-        if(!empty($language) && in_array($language, ['Gek', 'Vy%27keen', 'Korvax'])) {
+        if(!empty($language) && in_array($language, ['Gek', htmlspecialchars_decode('Vy&#39;keen'), 'Korvax'])) {
             $language_file = $language . ".txt";
         }
         else {
