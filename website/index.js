@@ -56,11 +56,17 @@ function setNmsLanguage() {
     window.location.href = url;
 }
 
-function setLanguageSelection(language) {
+function setLanguageSelection() {
     const urlSearchParams = new URLSearchParams(window.location.search),
         urlLanguage = urlSearchParams.get('language');
+    const selection = document.getElementById('language-selection');
+
+    if(!urlLanguage) {
+        selection.value = 'random';
+        return;
+    };
 
     const value = urlLanguage.toLowerCase();
-    const selection = document.getElementById('language-selection');
-    selection.value = ['gek', 'korvax', 'vykeen'].includes(value) ? value : ['random'];
+    console.log(value);
+    selection.value = ["gek", "korvax", "vy'keen"].includes(value) ? value : ['random'];
 }

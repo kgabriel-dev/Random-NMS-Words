@@ -34,16 +34,18 @@
             </span>
         </div>
 
-        <div id="language-container">
-            ...from the language of the <span id="language">(currently fetching...)</span>.
+        <div id="language-container" class="text-center">
+            <span>...from the language of the <span id="language">(currently fetching...)</span>.</span>
             <br><br><br>
             Specify a species to learn words from:
-            <select id="language-selection" onchange="setNmsLanguage()">
-                <option value="random">Random</option>
-                <option value="gek">Gek</option>
-                <option value="korvax">Korvax</option>
-                <option value="vy&#39;keen">Vy&#39;keen</option>
-            </select>
+            <div class="select-container flex-justify-center">
+                <select id="language-selection" onchange="setNmsLanguage()">
+                    <option value="random" selected>Random</option>
+                    <option value="gek">Gek</option>
+                    <option value="korvax">Korvax</option>
+                    <option value="vy&#39;keen">Vy&#39;keen</option>
+                </select>
+            </div>
         </div>
     </div>
 </div>
