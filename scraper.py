@@ -1,6 +1,7 @@
 import requests
 from urllib.parse import unquote
 from bs4 import BeautifulSoup
+import os
 
 
 def __main__():
@@ -28,6 +29,12 @@ def __main__():
         # Get the rows from the table
         rows = table_body.find_all('tr')
 
+        # check if the directory exists
+        try:
+            os.mkdir('dict')
+        except FileExistsError:
+            pass
+
         # Get the words from the rows
         file = open(f'dict/{language}.txt', 'w')
 
@@ -43,7 +50,7 @@ def __main__():
 
             if english != '':
                 file.write(
-                    f'{english}: {foreign};{foreign_caps};{foreign_all_caps}')
+                    f'{english}:{foreign};{foreign_caps};{foreign_all_caps}')
 
 
 if __name__ == '__main__':
