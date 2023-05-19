@@ -123,3 +123,17 @@ footer {
 a, a:visited, a:active {
     color: darkcyan;
 }
+
+#newWordButton {
+    background-color: #34495e;
+    color: white;
+    border-radius: .25em;
+    margin: 1.35em;
+    padding: .8em;
+    border: none;
+}
+
+#newWordButton:hover {
+    color: #f39c12;
+    cursor: pointer;
+}
