@@ -82,7 +82,7 @@ h1, h2, h3 {
 
 #word-container {
     text-align: center;
-    min-width: 400px;
+    min-width: 75%;
 }
 
 #word {
@@ -91,7 +91,7 @@ h1, h2, h3 {
 
 #translation-container {
     text-align: left;
-    min-width: 400px;
+    min-width: 75%;
 }
 
 #language-container {
@@ -128,7 +128,7 @@ a, a:visited, a:active {
     background-color: #34495e;
     color: white;
     border-radius: .25em;
-    margin: 1.35em;
+    margin-top: 2em;
     padding: .8em;
     border: none;
 }
@@ -136,4 +136,9 @@ a, a:visited, a:active {
 #newWordButton:hover {
     color: #f39c12;
     cursor: pointer;
+}
+
+#translation, #translation_caps {
+    display: inline-block;
+    margin-bottom: .75em;
 }
