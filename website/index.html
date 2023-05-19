@@ -9,17 +9,17 @@
 </head>
 
 <body>
-    <h1>Get a random word from the language of the Gek, the Korvax or the Vy&#39;keen.</h1>
+    <h1>Get a random word from the language of the Gek, the Korvax, the Vy&#39;keen or the Atlas.</h1>
     <div class="flex-justify-center">
     <div id="show">
         <h2>Your randomly selected word is...</h2>
         <div class="flex-justify-center">
-            <span class="container flex-grow" id="word-container">
+            <span class="container" id="word-container">
                 <h3>English Translation:</h3>
                 <span id="word">Fetching word...</span>
             </span>
 
-            <span class="container flex-grow" id="translation-container">
+            <span class="container" id="translation-container">
                 <h3>Foreign Word:</h3>
 
                 <span class="flex-justify-center">
@@ -31,27 +31,30 @@
                         <span id="translation_caps">Fetching translation...</span><br>
 
                         <strong>All Caps:</strong>
-                        <span id="translation_all-caps">Fetching translation...</span>
+                        <span id="translation_all-caps">Fetching translation...</span><br>
+
+                        <strong>Language:</strong>
+                        <span id="language">Currently fetching...</span>
                     </span>
                 </span>
             </span>
         </div>
 
-        <div id="language-container" class="text-center">
-            <span>...from the language of the <span id="language">(currently fetching...)</span>.</span>
-            <br><br><br>
-            Specify a species to learn words from:
-            <div class="select-container flex-justify-center">
-                <select id="language-selection" onchange="setNmsLanguage()">
-                    <option value="random" selected>Random</option>
-                    <option value="gek">Gek</option>
-                    <option value="korvax">Korvax</option>
-                    <option value="vy&#39;keen">Vy&#39;keen</option>
-                    <option value="atlas">Atlas</option>
-                </select>
-            </div>
+        <div class="flex-justify-center">
+            <div id="language-container" class="text-center container">
+                Specify a species to learn words from:
+                <div class="select-container flex-justify-center">
+                    <select id="language-selection" onchange="setNmsLanguage()">
+                        <option value="random" selected>Random</option>
+                        <option value="gek">Gek</option>
+                        <option value="korvax">Korvax</option>
+                        <option value="vy&#39;keen">Vy&#39;keen</option>
+                        <option value="atlas">Atlas</option>
+                    </select>
+                </div>
 
-            <button onclick="getRandomWord()" id="newWordButton">Learn a new word</button>
+                <button onclick="getRandomWord()" id="newWordButton">Learn a new word</button>
+            </div>
         </div>
     </div>
 </div>
@@ -59,8 +62,8 @@
 
 <footer class="flex-justify-center">
     <div class="text-center" id="legal">
-        <span>Dictionary: Data gathered from the <a href="https://nomanssky.fandom.com/wiki/No_Man%27s_Sky_Wiki" rel="nofollow">No Man&#39;s Sky Wiki</a> (<a href="https://nomanssky.fandom.com/wiki/Vy%27keen_(language)" rel="nofollow">Vy&#39;keen</a>, <a href="https://nomanssky.fandom.com/wiki/Gek_(language)" rel="nofollow">Gek</a>, <a href="https://nomanssky.fandom.com/wiki/Korvax_(language)" rel="nofollow">Korvax</a>)</span>
-        <br>
+        <span>Dictionary: Data gathered from the <a href="https://nomanssky.fandom.com/wiki/No_Man%27s_Sky_Wiki" rel="nofollow">No Man&#39;s Sky Wiki</a> (<a href="https://nomanssky.fandom.com/wiki/Vy%27keen_(language)" rel="nofollow">Vy&#39;keen</a>, <a href="https://nomanssky.fandom.com/wiki/Gek_(language)" rel="nofollow">Gek</a>, <a href="https://nomanssky.fandom.com/wiki/Korvax_(language)" rel="nofollow">Korvax</a>, <a href="https://nomanssky.fandom.com/wiki/Atlas_(language)" rel="nofollow">Atlas</a>)</span>
+        <br><br>
         <span>Background: <a href="https://wallpapers.com/wallpapers/no-man-s-sky-man-with-dinosaurs-3qmj7oaige168170.html" rel="nofollow">Wallpaper by vac9</a> on Wallpapers.com</span>
         <br><br>
         <a href="https://kgabriel.dev/imprint">IMPRINT / DATA PROTECTION</a>

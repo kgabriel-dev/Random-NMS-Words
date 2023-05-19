@@ -50,11 +50,13 @@ select::-ms-expand {
 #show {
     border: 2px solid blue;
     border-radius: 1em;
-    margin: 2em;
+    margin: 2em 0;
     padding: 2em;
     display: inline-block;
     background-color: rgba(255,255,255,0.5);
     font-size: large;
+    width: 100%;
+    max-width: 1100px;
 }
 
 h1, h2, h3 {
@@ -81,8 +83,10 @@ h1, h2, h3 {
 }
 
 #word-container {
+    display: inline-block;
     text-align: center;
-    min-width: 75%;
+    width: 75%;
+    max-width: 400px;
 }
 
 #word {
@@ -90,18 +94,21 @@ h1, h2, h3 {
 }
 
 #translation-container {
+    display: inline-block;
     text-align: left;
-    min-width: 75%;
+    width: 75%;
+    max-width: 400px;
+}
+
+#translation-container > span > span > span:not(:last-child) {
+    display: inline-block;
+    margin-bottom: .75em;
 }
 
 #language-container {
     font-size: large;
     text-align: center;
     margin-top: 1em;
-}
-
-#language {
-    font-weight: bold;
 }
 
 .text-center {
@@ -136,9 +143,4 @@ a, a:visited, a:active {
 #newWordButton:hover {
     color: #f39c12;
     cursor: pointer;
-}
-
-#translation, #translation_caps {
-    display: inline-block;
-    margin-bottom: .75em;
 }
