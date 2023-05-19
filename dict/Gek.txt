@@ -1,4 +1,4 @@
-709
+735
 give:unk;Luytt;
 high:kala;Befug;
 docking:burtvi;Oadalsosk;Adsethle
@@ -707,7 +707,30 @@ messages:wesetykk;Oitaprase;
 reply:lamane;Rulofa;
 perhaps:udeligh;Yottunar;
 answer:hofsos;Ahtimi;
-ear
-:han
-;
-;
+ear:han;;
+Nanite:;Iasitii;
+Sodium:leymfort;;
+Clusters:;Madurkra;
+grant:laforma;;
+blueprints:therlasba;;
+upgrades:nargerm;;
+return:rymimere;;
+don't:jusse;;
+quota:ridpla;;
+month:aderer;;
+they'll:eerolle;;
+permit:lukorrei;;
+Greetings:;Hallmarkis;
+Captain:;Tisetning;
+watch:uaalik;;
+proceeding:vammitidsp;;
+smoothly:utgaelevi;;
+metal:rohandl;;gugslis
+catalyst:;;
+organic:afhenla;Lojufraga;
+Condensed:;Lacetatni;
+Carbon:gasv;Yirjun;
+Oxygen:;Miyysi;
+greet/welcome:grenn;;
+"I am ____ salesgek.":luaf;;
+"I _____ my Just impress!":sailu;;
