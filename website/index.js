@@ -52,7 +52,7 @@ function setNmsLanguage() {
 
     const url = selection !== 'random' ? 'https://nms-words.kgabriel.dev?language=' + language : 'https://nms-words.kgabriel.dev';
     
-    window.location.href = url;
+    window.history.replaceState({}, '', url);
 }
 
 function setLanguageSelection() {
