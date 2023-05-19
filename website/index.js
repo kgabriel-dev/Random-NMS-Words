@@ -7,7 +7,9 @@ async function getRandomWord() {
     const urlSearchParams = new URLSearchParams(window.location.search),
         currentLanguage = urlSearchParams.get('language');
 
-    const url = currentLanguage ? 'https://nms-words.kgabriel.dev/random-word.php?language=' + currentLanguage : 'https://nms-words.kgabriel.dev/random-word.php';
+    const languageScriptUrl = 'https://nms-words.kgabriel.dev/random-word.php';
+
+    const url = currentLanguage ? `${languageScriptUrl}?language=${currentLanguage.toString()}` : languageScriptUrl;
 
     const response = await fetch(url, { method: 'GET', mode: 'no-cors'});
     
@@ -23,7 +25,6 @@ async function getRandomWord() {
         return;
     }
 
-    console.log(data);
     setDataInDom(data);
 }
 
@@ -32,8 +33,6 @@ function setDataInDom(data) {
     
     const translation = data.word.split(':')[0];
     const wordData = data.word.split(':')[1].split(';');
-
-    console.log(wordData);
 
     setStringForDomElementWithId('word', translation);
     setStringForDomElementWithId('translation', wordData[0] || 'Unknown');
@@ -67,6 +66,5 @@ function setLanguageSelection() {
     };
 
     const value = urlLanguage.toLowerCase();
-    console.log(value);
-    selection.value = ["gek", "korvax", "vy'keen"].includes(value) ? value : ['random'];
+    selection.value = ["gek", "korvax", "vy'keen", "atlas"].includes(value) ? value : ['random'];
 }

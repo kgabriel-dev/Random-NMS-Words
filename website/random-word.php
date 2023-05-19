@@ -27,7 +27,7 @@
     function randomWord($language) {
         $language_file = NULL;
 
-        if(!empty($language) && in_array($language, ['Gek', htmlspecialchars_decode('Vy&#39;keen'), 'Korvax'])) {
+        if(!empty($language) && in_array($language, ['Gek', htmlspecialchars_decode('Vy&#39;keen'), 'Korvax', 'Atlas'])) {
             $language_file = $language . ".txt";
         }
         else {
@@ -48,7 +48,7 @@
 
         // Get random word
         $index = rand(0, $word_count);
-        $fileObject->seek($index);
+        $fileObject->seek($index+1);
         
         $word = $fileObject->current();
         $word = str_replace("\n", "", $word);
